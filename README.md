@@ -2,6 +2,8 @@
 
 Work smarter. Take better breaks. A holiday and leave planner for Android and iOS built with Flutter.
 
+Local-only: no accounts, no cloud, no tracking. Works fully offline.
+
 ## Current state
 Only the domain logic (dates, holidays, leave optimizer, leave balances) and its tests exist, plus a shell app. See TODO.md.
 

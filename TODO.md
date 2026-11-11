@@ -12,7 +12,7 @@ Nothing in this repository has been compiled or tested yet. The workspace it was
 - [~] pubspec.yaml, analysis_options.yaml, CI workflow
 - [~] Shell main.dart (placeholder only, not the real app)
 - [ ] Generate android/ and ios/ (CI does this once; commit the result)
-- [ ] Riverpod, GoRouter, Drift, theme, design tokens
+- [ ] Riverpod, GoRouter, local storage (shared_preferences JSON repositories), theme, design tokens
 
 ## Phase 3: Core features
 - [~] Calendar date utilities and work schedule (domain)
@@ -21,13 +21,13 @@ Nothing in this repository has been compiled or tested yet. The workspace it was
 - [~] Leave balance rules (domain)
 - [~] Holiday rule engine (fixed dates, Easter, tabular Islamic estimate) and year resolver, any year
 - [~] India 2027 gazetted dataset from DoPT OM dated 16.07.2026 (assets/data/holidays/IN-2027.json)
-- [ ] Datasets for other years: add one IN-<year>.json per year, or serve them from the remote update channel
+- [ ] Datasets for other years: add one IN-<year>.json per year in assets/data/holidays and ship with an app update, or let users import a JSON file
 - [ ] Restricted (optional) holidays and state-level holidays
 - [ ] Onboarding, dashboard, calendar views, leave screens, saved plans
 
 ## Phase 4 to 7
 - [ ] Notifications, sharing, settings, localization, privacy controls
-- [ ] Supabase sync and RLS, admin dashboard
+- [x] Cloud backend, accounts, sync and admin dashboard: dropped. The app is local-only by decision.
 - [ ] Widget and integration tests, performance and accessibility audit
 - [ ] Legal drafts, store listings, release checklist
 

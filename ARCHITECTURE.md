@@ -3,6 +3,13 @@
 ## Layers
 Feature-first Clean Architecture. Each feature folder has `domain/` (pure Dart, no Flutter), `data/` (Drift, JSON assets, Supabase) and `presentation/` (widgets, Riverpod providers). Only `domain/` exists so far.
 
+## Local-only by design
+There is no backend, account, cloud sync, remote dataset update, admin dashboard or analytics SDK. Everything runs on the device and works offline. Consequences:
+- Data lives in simple repositories over `shared_preferences` (JSON), which works on Android, iOS and web. Drift/SQLite is not used.
+- Holiday data ships inside the app as `assets/data/holidays/<country>-<year>.json`. New years arrive with app updates, or the user can import a JSON file in Settings.
+- Backup and moving to a new phone use JSON export and import.
+- No account means nothing to delete in the cloud: "delete my data" only clears local storage.
+
 ## Domain modules written so far
 - `core/utils/date_utils.dart`: all dates are UTC-midnight calendar days, so arithmetic ignores time zones and daylight saving. Strict date parsing rejects impossible dates such as 30 February.
 - `features/calendar/domain/work_schedule.dart`: working weekdays (Monday = 1 ... Sunday = 7).
