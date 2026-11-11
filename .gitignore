@@ -1,0 +1,19 @@
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+*.iml
+.idea/
+.vscode/
+.DS_Store
+
+# Never commit signing material or secrets
+*.jks
+*.keystore
+key.properties
+.env
+.env.*
+google-services.json
+GoogleService-Info.plist
