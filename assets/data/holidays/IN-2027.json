@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "holidays": [
+    {
+      "id": "in-2027-republic-day",
+      "name": "Republic Day",
+      "date": "2027-01-26",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "yearlyFixedDate",
+      "ruleId": "in-republic-day"
+    },
+    {
+      "id": "in-2027-id-ul-fitr",
+      "name": "Id-ul-Fitr",
+      "date": "2027-03-10",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday. Subject to moon sighting.",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "tentative",
+      "recurrence": "lunar",
+      "ruleId": "in-id-ul-fitr"
+    },
+    {
+      "id": "in-2027-holi",
+      "name": "Holi",
+      "date": "2027-03-23",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "lunar"
+    },
+    {
+      "id": "in-2027-good-friday",
+      "name": "Good Friday",
+      "date": "2027-03-26",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "ruleBased",
+      "ruleId": "in-good-friday"
+    },
+    {
+      "id": "in-2027-ram-navami",
+      "name": "Ram Navami",
+      "date": "2027-04-15",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "lunar"
+    },
+    {
+      "id": "in-2027-mahavir-jayanti",
+      "name": "Mahavir Jayanti",
+      "date": "2027-04-19",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "lunar"
+    },
+    {
+      "id": "in-2027-id-ul-zuha",
+      "name": "Id-ul-Zuha (Bakrid)",
+      "date": "2027-05-17",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday. Subject to moon sighting.",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "tentative",
+      "recurrence": "lunar",
+      "ruleId": "in-id-ul-zuha"
+    },
+    {
+      "id": "in-2027-budha-purnima",
+      "name": "Budha Purnima",
+      "date": "2027-05-20",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "lunar"
+    },
+    {
+      "id": "in-2027-muharram",
+      "name": "Muharram",
+      "date": "2027-06-16",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday. Subject to moon sighting.",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "tentative",
+      "recurrence": "lunar",
+      "ruleId": "in-muharram"
+    },
+    {
+      "id": "in-2027-independence-day",
+      "name": "Independence Day",
+      "date": "2027-08-15",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "yearlyFixedDate",
+      "ruleId": "in-independence-day"
+    },
+    {
+      "id": "in-2027-milad-un-nabi",
+      "name": "Milad-un-Nabi (Prophet Mohammad's Birthday)",
+      "date": "2027-08-15",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday. Subject to moon sighting.",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "tentative",
+      "recurrence": "lunar",
+      "ruleId": "in-milad-un-nabi"
+    },
+    {
+      "id": "in-2027-janmashtami",
+      "name": "Janmashtami (Vaishnav)",
+      "date": "2027-08-25",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "lunar"
+    },
+    {
+      "id": "in-2027-gandhi-jayanti",
+      "name": "Mahatma Gandhi's Birthday",
+      "date": "2027-10-02",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "yearlyFixedDate",
+      "ruleId": "in-gandhi-jayanti"
+    },
+    {
+      "id": "in-2027-dussehra",
+      "name": "Dussehra (Vijaya Dashmi)",
+      "date": "2027-10-09",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "lunar"
+    },
+    {
+      "id": "in-2027-diwali",
+      "name": "Diwali (Deepavali)",
+      "date": "2027-10-29",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "lunar"
+    },
+    {
+      "id": "in-2027-guru-nanak-jayanti",
+      "name": "Guru Nanak's Birthday",
+      "date": "2027-11-14",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "lunar"
+    },
+    {
+      "id": "in-2027-christmas",
+      "name": "Christmas Day",
+      "date": "2027-12-25",
+      "country": "IN",
+      "category": "national",
+      "description": "Centrally gazetted holiday",
+      "source": "DoPT OM F.No.12/2/2023-JCA dated 16.07.2026, Annexure I (Delhi/New Delhi central offices)",
+      "verification": "verified",
+      "recurrence": "yearlyFixedDate",
+      "ruleId": "in-christmas"
+    }
+  ]
+}

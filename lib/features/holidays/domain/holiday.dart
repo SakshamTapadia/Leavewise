@@ -43,6 +43,7 @@ class Holiday {
     this.verification = VerificationStatus.unverified,
     this.isOptional = false,
     this.recurrence = HolidayRecurrence.none,
+    this.ruleId,
   }) : date = dateOnly(date);
 
   final String id;
@@ -62,6 +63,10 @@ class Holiday {
   final bool isOptional;
   final HolidayRecurrence recurrence;
 
+  /// Id of the [HolidayRule] this record belongs to. A dataset record with a
+  /// ruleId replaces the computed holiday from that rule for the same year.
+  final String? ruleId;
+
   Holiday copyWith({
     String? id,
     String? name,
@@ -74,6 +79,7 @@ class Holiday {
     VerificationStatus? verification,
     bool? isOptional,
     HolidayRecurrence? recurrence,
+    String? ruleId,
   }) {
     return Holiday(
       id: id ?? this.id,
@@ -87,6 +93,7 @@ class Holiday {
       verification: verification ?? this.verification,
       isOptional: isOptional ?? this.isOptional,
       recurrence: recurrence ?? this.recurrence,
+      ruleId: ruleId ?? this.ruleId,
     );
   }
 
@@ -102,6 +109,7 @@ class Holiday {
         'verification': verification.name,
         'optional': isOptional,
         'recurrence': recurrence.name,
+        if (ruleId != null) 'ruleId': ruleId,
       };
 
   /// Throws [FormatException] for malformed records.
@@ -127,6 +135,7 @@ class Holiday {
               'verification',
             ),
       isOptional: (optional as bool?) ?? false,
+      ruleId: _optionalString(json, 'ruleId'),
       recurrence: json['recurrence'] == null
           ? HolidayRecurrence.none
           : _parseEnum(

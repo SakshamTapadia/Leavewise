@@ -10,6 +10,9 @@ Feature-first Clean Architecture. Each feature folder has `domain/` (pure Dart, 
 - `features/leave_balance/domain`: statuses, deduction rules, balance summaries. Suggested, rejected and cancelled entries never deduct.
 - `features/leave_optimizer/domain`: the optimizer.
 
+## Holidays for any year
+`holiday_rules.dart` generates holidays from rules for any year: fixed Gregorian dates, Easter-relative dates (exact), and Islamic dates (tabular estimate, always tentative, since real dates follow moon sighting). `resolveHolidaysForYear` merges these with per-year dataset records. A record carrying a `ruleId` replaces what that rule would generate, so official dates beat estimates. Festivals that follow a lunisolar panchang have no rule and appear only when a dataset provides them. Category `national` means centrally gazetted, so turning off the religious preference does not hide gazetted festivals.
+
 ## Optimizer
 Each day in the planning horizon is free (holiday, non-working weekday, or already-planned leave) or costly (needs one new leave). A recommendation is a contiguous window with exactly c costly days that cannot be extended on either side without another leave. All such windows are enumerated for c = 1..budget, so results are exhaustive and every duration is read from the calendar. Day kinds are exclusive, with holiday taking precedence over weekend over existing leave.
 
