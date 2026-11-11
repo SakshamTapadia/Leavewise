@@ -1,8 +1,8 @@
-/// Calendar-day helpers.
-///
-/// Every date in the domain layer is a calendar day normalised to UTC
-/// midnight, so day arithmetic never depends on time zones or daylight
-/// saving changes.
+// Calendar-day helpers.
+//
+// Every date in the domain layer is a calendar day normalised to UTC
+// midnight, so day arithmetic never depends on time zones or daylight
+// saving changes.
 
 /// Drops the time-of-day and time zone, returning a UTC midnight date.
 DateTime dateOnly(DateTime d) => DateTime.utc(d.year, d.month, d.day);
