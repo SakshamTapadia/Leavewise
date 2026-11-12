@@ -28,6 +28,8 @@ void main() {
 
   testWidgets('finishing onboarding opens a dashboard built from the data',
       (tester) async {
+    await tester.binding.setSurfaceSize(const Size(800, 3000));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
     await pumpApp(tester);
 
     await tester.tap(find.text('Get started'));
