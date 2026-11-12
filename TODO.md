@@ -1,37 +1,40 @@
 # LeaveWise progress
 
-Status key: [x] written, [~] written but not yet run, [ ] not started.
+Status: [x] done and passing CI (analyzer, tests, Android release build), [ ] not started.
+CI pins Flutter 3.47.9. Newer Flutter versions deprecate the material.dart import, so migrate before upgrading.
 
-Nothing in this repository has been compiled or tested yet. The workspace it was written in has no Dart or Flutter SDK. Run the GitHub Actions workflow (or `flutter analyze` and `flutter test` locally) and fix whatever it reports before building further.
+## Built
+- [x] Date utilities, work schedules, leave balance rules
+- [x] Holiday model, JSON import/export, filters, rule engine (fixed, Easter, Islamic estimate)
+- [x] India 2027 gazetted dataset (DoPT OM 16.07.2026, via a website copy; verify against the official PDF)
+- [x] Leave optimizer: candidates, four sort orders, no-overlap, balance cap, free stretches, annual plan
+- [x] Local storage (shared_preferences JSON), Riverpod providers, GoRouter shell
+- [x] Light and dark theme, design tokens, accessible calendar markers (H, L, O letters)
+- [x] Onboarding (7 steps, leave step skippable)
+- [x] Home dashboard, calendar (month, year, agenda, day sheet, custom holidays)
+- [x] Breaks screen (budget presets and custom, sorting, horizon, overlap toggle)
+- [x] Leaves screen (balances, add, edit, delete, types, statuses, history)
+- [x] Saved plans (edit, duplicate, status changes, export, share as text, delete)
+- [x] Settings (location, schedule, holiday filters, theme, export, delete all data)
+- [x] Privacy and terms drafts, about page, licenses page
+- [x] Tests: domain, rules, plans, and an app flow test (onboarding to dashboard)
 
-## Phase 1: Planning
-- [x] ARCHITECTURE.md
-- [x] TODO.md
+## Not done yet, needed before store release
+- [ ] Look at the app on a real device or emulator. Layout has never been seen, only tested.
+- [ ] Generate android/ and ios/ folders and commit them (CI regenerates them each run today)
+- [ ] App icon, splash screen, store screenshots and feature graphic
+- [ ] Release signing: Android upload keystore and CI secrets, iOS certificates and provisioning
+- [ ] Application ID and bundle ID check (com.leavewise.app is assumed, confirm availability)
+- [ ] Contact support email and privacy policy URL (stores require a public URL)
+- [ ] Local notifications and quiet hours
+- [ ] Shareable image cards (text sharing exists)
+- [ ] Hindi localization
+- [ ] Import data from a backup file
+- [ ] State holidays and restricted (optional) holidays dataset
+- [ ] Holiday data for years other than 2027 (festival dates need official sources)
+- [ ] Hardware keyboard focus pass, TalkBack and VoiceOver pass, high contrast mode
+- [ ] Integration tests on devices, performance profiling
+- [ ] docs/legal, Play Data Safety and App Privacy answers, RELEASE_CHECKLIST.md, store guides
 
-## Phase 2: Foundation (app shell built, awaiting CI)
-- [~] pubspec.yaml, analysis_options.yaml, CI workflow
-- [~] Shell main.dart (placeholder only, not the real app)
-- [ ] Generate android/ and ios/ (CI does this once; commit the result)
-- [ ] Riverpod, GoRouter, local storage (shared_preferences JSON repositories), theme, design tokens
-
-## Phase 3: Core features
-- [~] Calendar date utilities and work schedule (domain)
-- [~] Holiday model, JSON import/export, filters (domain)
-- [~] Leave optimizer: candidates, ranking, free stretches, annual plan (domain)
-- [~] Leave balance rules (domain)
-- [~] Holiday rule engine (fixed dates, Easter, tabular Islamic estimate) and year resolver, any year
-- [~] India 2027 gazetted dataset from DoPT OM dated 16.07.2026 (assets/data/holidays/IN-2027.json)
-- [ ] Datasets for other years: add one IN-<year>.json per year in assets/data/holidays and ship with an app update, or let users import a JSON file
-- [ ] Restricted (optional) holidays and state-level holidays
-- [ ] Onboarding, dashboard, calendar views, leave screens, saved plans
-
-## Phase 4 to 7
-- [ ] Notifications, sharing, settings, localization, privacy controls
-- [x] Cloud backend, accounts, sync and admin dashboard: dropped. The app is local-only by decision.
-- [ ] Widget and integration tests, performance and accessibility audit
-- [ ] Legal drafts, store listings, release checklist
-
-## Holiday data rule
-Holidays work for any year. Fixed-date holidays and Good Friday are computed exactly. Islamic holidays are estimated and always `tentative`. Lunisolar festivals (Holi, Diwali, Dussehra and similar) are never computed: they come from per-year dataset files taken from official notifications. A dataset record with a `ruleId` replaces the computed value for that year.
-
-The 2027 file was transcribed from the DoPT notification as reproduced on staffnews.in. Spot-check it against the official PDF before release. It covers centrally gazetted holidays for Delhi/New Delhi offices only.
+## Dropped by decision
+Supabase, accounts, sync, remote updates, admin dashboard, analytics. The app is local-only.
