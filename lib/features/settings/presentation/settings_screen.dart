@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:leavewise/app/providers.dart';
 import 'package:leavewise/core/constants/regions.dart';
+import 'package:leavewise/core/theme/app_colors.dart';
 import 'package:leavewise/core/theme/app_theme.dart';
 import 'package:leavewise/features/calendar/domain/work_schedule.dart';
 import 'package:leavewise/features/holidays/domain/holiday_filter.dart';

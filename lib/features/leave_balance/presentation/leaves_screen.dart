@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:leavewise/app/providers.dart';
+import 'package:leavewise/core/theme/app_colors.dart';
 import 'package:leavewise/core/theme/app_theme.dart';
 import 'package:leavewise/core/utils/format.dart';
 import 'package:leavewise/core/widgets/common.dart';

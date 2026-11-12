@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leavewise/core/theme/app_colors.dart';
 import 'package:leavewise/core/theme/app_theme.dart';
 
 class _DocScreen extends StatelessWidget {
