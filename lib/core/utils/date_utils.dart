@@ -80,3 +80,13 @@ DateTime parseDateKey(String source) {
   }
   return DateTime.utc(year, month, day);
 }
+
+/// Adds [months] to a calendar date, clamping the day to the target month's
+/// length (31 January plus one month is 28 or 29 February).
+DateTime addMonths(DateTime d, int months) {
+  final total = d.year * 12 + (d.month - 1) + months;
+  final year = total ~/ 12;
+  final month = total % 12 + 1;
+  final maxDay = daysInMonth(year, month);
+  return DateTime.utc(year, month, d.day > maxDay ? maxDay : d.day);
+}

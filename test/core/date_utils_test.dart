@@ -87,4 +87,19 @@ void main() {
       expect(() => parseDateKey('not a date'), throwsFormatException);
     });
   });
+
+  group('addMonths', () {
+    test('clamps the day to the target month', () {
+      expect(addMonths(d(2027, 1, 31), 1), d(2027, 2, 28));
+      expect(addMonths(d(2028, 1, 31), 1), d(2028, 2, 29));
+      expect(addMonths(d(2027, 3, 31), -1), d(2027, 2, 28));
+    });
+
+    test('crosses year boundaries in both directions', () {
+      expect(addMonths(d(2026, 11, 15), 3), d(2027, 2, 15));
+      expect(addMonths(d(2027, 1, 15), -2), d(2026, 11, 15));
+      expect(addMonths(d(2026, 11, 12), 12), d(2027, 11, 12));
+      expect(addMonths(d(2026, 11, 12), 0), d(2026, 11, 12));
+    });
+  });
 }

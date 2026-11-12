@@ -31,6 +31,7 @@ class LeaveEntry {
     required this.days,
     required this.status,
     this.note = '',
+    this.planId,
   });
 
   final String id;
@@ -42,7 +43,38 @@ class LeaveEntry {
   final double days;
   final LeaveStatus status;
   final String note;
+
+  /// The saved plan this entry was created from, if any.
+  final String? planId;
+
+  LeaveEntry copyWith({
+    String? id,
+    String? typeId,
+    DateTime? start,
+    DateTime? end,
+    double? days,
+    LeaveStatus? status,
+    String? note,
+  }) {
+    return LeaveEntry(
+      id: id ?? this.id,
+      typeId: typeId ?? this.typeId,
+      start: start ?? this.start,
+      end: end ?? this.end,
+      days: days ?? this.days,
+      status: status ?? this.status,
+      note: note ?? this.note,
+      planId: planId,
+    );
+  }
 }
+
+/// Statuses that mean the user really intends to be away on those days.
+const Set<LeaveStatus> activeLeaveStatuses = {
+  LeaveStatus.planned,
+  LeaveStatus.applied,
+  LeaveStatus.approved,
+};
 
 /// Which statuses count against a balance.
 ///

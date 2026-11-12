@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:leavewise/app/app.dart';
+import 'package:leavewise/app/providers.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-/// Foundation shell only. The real application UI (onboarding, dashboard,
-/// calendar and the rest) is tracked in TODO.md and is not built yet.
-void main() {
-  runApp(const LeaveWiseApp());
-}
-
-class LeaveWiseApp extends StatelessWidget {
-  const LeaveWiseApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'LeaveWise',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorSchemeSeed: const Color(0xFF1F2A60),
-        useMaterial3: true,
-      ),
-      home: const Scaffold(
-        body: Center(child: Text('LeaveWise')),
-      ),
-    );
-  }
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final prefs = await SharedPreferences.getInstance();
+  runApp(
+    ProviderScope(
+      overrides: [sharedPrefsProvider.overrideWithValue(prefs)],
+      child: const LeaveWiseApp(),
+    ),
+  );
 }

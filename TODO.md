@@ -8,7 +8,7 @@ Nothing in this repository has been compiled or tested yet. The workspace it was
 - [x] ARCHITECTURE.md
 - [x] TODO.md
 
-## Phase 2: Foundation
+## Phase 2: Foundation (app shell built, awaiting CI)
 - [~] pubspec.yaml, analysis_options.yaml, CI workflow
 - [~] Shell main.dart (placeholder only, not the real app)
 - [ ] Generate android/ and ios/ (CI does this once; commit the result)
